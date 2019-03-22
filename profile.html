@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Profile</title>
+        <!--#include file="./includes/common_head.html"-->
+
+    </head>
+    <body>
+        <div class="wrapper">
+        <!--#include file="./includes/header.html"-->
+        <div class="profile-avatar">            
+            <img id="avatar" src="./images/empty-avatar.jpg" >
+            <input type="file" class="edit-icon" src="./images/edit_profile.png" onclick="uploadImage();"></input>
+        </div>
+
+        <div class="badges">
+                <img src="./images/medal.svg"><label>Beginner</label>
+
+        </div>
+        <div class="desc">
+            <ul>
+                <li><label>User Name</label>
+                    <input type="text" name="username">
+                    <input class="edit-icon" id="edit-username" type="image" src="./images/edit_profile.png" onclick="edit(id);"></input>
+                </li>
+                <li><label>About Me</label>
+                    <textarea id="about-me"></textarea>
+                    <input class="edit-icon" id="edit-about-me"type="image" src="./images/edit_profile.png"></input>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </body>
+  <!--#include file="./includes/footer.html"-->
+</html>
