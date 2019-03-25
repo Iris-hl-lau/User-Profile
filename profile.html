@@ -2,34 +2,78 @@
 <html lang="en">
     <head>
         <title>Profile</title>
-        <!--#include file="./includes/common_head.html"-->
-
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./style/style.css">
+        <script src="script.js"></script>
     </head>
     <body>
-        <div class="wrapper">
-        <!--#include file="./includes/header.html"-->
-        <div class="profile-avatar">            
-            <img id="avatar" src="./images/empty-avatar.jpg" >
-            <input type="file" class="edit-icon" src="./images/edit_profile.png" onclick="uploadImage();"></input>
-        </div>
+        <div id="wrapper">
+            <header class="header">
+                <h1 class="logo">Project</h1>
+                <nav class="navbar">
+                  <ul>
+                    <li>
+                      <span class="heading">HomePage<em></em></span>
+                      <ul>
+                        <li><a title="link" href="#" class="heading">HomePage</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <span class="heading">Profile</span>
+                      <ul>
+                        <li class="selected"><a title="link" href="#">Introduction</a></li>
+                        <li><a title="link" href="../profile.html">Profile</a></li>
+                        </ul>
+                    </li>
+            
+                    <li>
+                      <span class="heading">Settings<em></em></span>
+                      <ul>
+                        <li><a title="link" href="#">Settings</a></li>
+                      </ul>
+                    </li>
+            
+                    <li>
+                      <span class="heading">Search</span>
+                      <ul>
+                        <li><a title="link" href="#">Search</a></li>
+                        
+                      </ul>
+                    </li>
+                    
+                  </ul>
+                </nav>
+                <h1 class="headline"></h1>
+            </header>
+            <div class="main">
+                
+                <div class="profile-avatar">    
+                        <img src="./images/cover.jpg" id="cover" alt=""><br>  
+                        <img src="./images/empty-avatar.jpg" id="avatar" alt=""> <br>
+                        <!-- <img src="./images/edit_profile.png" id="edit-avatar" alt=""> -->
+                        <!-- <input type="file" onchange="uploadImage();"><br> -->
+                        <p id="name">Name</p><img id="badge" src="./images/medal.svg"><label></label>
+                </div>
 
-        <div class="badges">
-                <img src="./images/medal.svg"><label>Beginner</label>
+                
+                <div class="desc">
+                    <ul>
+                        <li><label>User Name</label>
+                            <textarea id="username"></textarea>
+                            <input class="edit-icon" id="edit-username" type="image" src="./images/edit_profile.png" onclick="edit(id);"></input>
+                        </li>
+                        <li><label id="aboutme-label">About Me</label>
+                            <textarea id="about-me" ></textarea>
+                            <input class="edit-icon" id="edit-about-me" type="image" src="./images/edit_profile.png" ></input>
+                        </li>
+                        
+                    </ul>
+                    <button type="button" onclick="saveProfile()">Save</button>
+                </div>
 
-        </div>
-        <div class="desc">
-            <ul>
-                <li><label>User Name</label>
-                    <input type="text" name="username">
-                    <input class="edit-icon" id="edit-username" type="image" src="./images/edit_profile.png" onclick="edit(id);"></input>
-                </li>
-                <li><label>About Me</label>
-                    <textarea id="about-me"></textarea>
-                    <input class="edit-icon" id="edit-about-me"type="image" src="./images/edit_profile.png"></input>
-                </li>
-            </ul>
-        </div>
+            </div>
     </div>
     </body>
-  <!--#include file="./includes/footer.html"-->
+    
 </html>
